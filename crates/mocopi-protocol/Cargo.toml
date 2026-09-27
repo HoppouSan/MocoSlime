@@ -1,0 +1,12 @@
+[package]
+name = "mocopi-protocol"
+version = "0.1.0"
+edition = "2021"
+description = "Mocopi BLE packet decoding and protocol definitions"
+license = "MIT"
+
+[dependencies]
+serde = { workspace = true, features = ["derive"] }
+thiserror = { workspace = true }
+nalgebra = { workspace = true }
+half = "2.4"
