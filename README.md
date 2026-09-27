@@ -141,8 +141,8 @@ Danach liegt alles Startfähige in `installer/stage/`. Details + Setup-Erstellun
 13. ✅ Settings
 14. ✅ System Tray (Hide-to-Tray, Menü, Status-Tooltip)
 15. ✅ Logging & Diagnostics (Datei + Rotation + GUI-Logs)
-16. ✅ Tests (Unit + Pipeline-Integration)
-17. ✅ Windows Installer (Inno Setup + Stage-Skript)
+
+
 
 ## Roadmap
 
