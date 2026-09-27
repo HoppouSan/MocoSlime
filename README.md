@@ -1,13 +1,13 @@
 # Mocoslime — Native Windows Mocopi Bridge for SlimeVR
 
-Mocoslime connects Sony Mocopi trackers to SlimeVR Server over Bluetooth LE on Windows. It is an independent community project and is not affiliated with Sony or SlimeVR.
+Mocoslime connects Sony Mocopi trackers to SlimeVR Server over Bluetooth LE on Windows. It is an independent community project and is not affiliated with Sony or SlimeVR or MoSlime.
 
 ## Architecture
 
 ```
 ┌─────────────────┐     ┌──────────────────┐     ┌─────────────────┐
 │   Flutter/Dart  │────▶│    Rust Core     │────▶│  Windows BLE    │
-│      GUI        │ FFI │  (moslime-core)  │     │  (WinRT APIs)   │
+│      GUI        │ FFI │  (mocoslime-core)  │     │  (WinRT APIs)   │
 └─────────────────┘     └──────────────────┘     └─────────────────┘
                               │
                               ▼
@@ -37,7 +37,7 @@ mocoslime/
 │   ├── slimevr-protocol/      # SlimeVR UDP packet serialization
 │   ├── configuration/         # Configuration management
 │   ├── mocopi-ble-windows/    # Native Windows BLE (WinRT)
-│   ├── moslime-core/          # Core application logic (legacy internal crate name)
+│   ├── mocoslime-core/          # Core application logic (legacy internal crate name)
 │   └── ffi/                   # FFI bridge for Flutter
 ├── flutter/
 │   ├── lib/
@@ -211,9 +211,4 @@ Supported body roles (mapped to SlimeVR sensor IDs 0-14):
 
 MIT (see [LICENSE](LICENSE) and upstream attribution in [NOTICE](NOTICE)).
 
-## Acknowledgments
-
-- Original MoSlime Python project
-- SlimeVR protocol documentation
-- Sony Mocopi tracker specifications
 
