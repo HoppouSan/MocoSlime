@@ -66,6 +66,30 @@ mocoslime/
 - **Modern Flutter UI**: Material 3, system tray, responsive design
 - **Persistent Configuration**: JSON-based config with migration
 
+  ## Trackers
+
+**Tracking Status**
+
+* `Searching for Tracking Data...`
+* Displays the current mocopi tracking connection status.
+
+**Manual Reconnect**
+
+* **Reconnect** — manually reconnect the mocopi trackers and resume tracking data reception.
+* Useful when a tracker connection is lost or tracking data stops being received.
+
+
+
+### Language Support
+
+mocoSlime supports the following languages:
+
+* EN English
+* 🇩🇪 German
+* 🇯🇵 Japanese
+* 🇨🇳 Chinese
+
+
 ## Building
 
 ### Prerequisites
@@ -122,9 +146,7 @@ Danach liegt alles Startfähige in `installer/stage/`. Details + Setup-Erstellun
 
 ## Roadmap
 
-Priorisierte Produktverbesserungen, SlimeVR-Diagnose und die geplante UI-Lokalisierung
-auf Deutsch, Englisch, Japanisch und vereinfachtes Chinesisch stehen in
-[`docs/product-roadmap.md`](docs/product-roadmap.md).
+Prioritized product improvements, SlimeVR diagnostics, and planned UI localization for German, English, Japanese, and Simplified Chinese
 
 ## Configuration
 
@@ -195,10 +217,3 @@ MIT (see [LICENSE](LICENSE) and upstream attribution in [NOTICE](NOTICE)).
 - SlimeVR protocol documentation
 - Sony Mocopi tracker specifications
 
-## Open-source release status
-
-See [Release readiness](docs/release-readiness.md) for the checklist, known
-limitations, and tracking/SlimeVR feature roadmap. Contributions are welcome
-under the MIT license; see [CONTRIBUTING.md](CONTRIBUTING.md) and
-[SECURITY.md](SECURITY.md).
-[CONTRIBUTING.md](CONTRIBUTING.md) and [SECURITY.md](SECURITY.md).
