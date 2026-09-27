@@ -112,17 +112,7 @@ flutter pub get
 flutter build windows --release
 ```
 
-### Zusammenführen (wichtig für FFI)
 
-`moslime_ffi.dll` muss neben `Mocoslime.exe` liegen:
-
-```powershell
-powershell -File installer/stage.ps1
-```
-
-Danach liegt alles Startfähige in `installer/stage/`. Details + Setup-Erstellung:
-`installer/README.md`. Logs: `%APPDATA%\Mocoslime\logs\moslime.log`
-(täglich rotiert, 7 Dateien), GUI-Ansicht unter Screens → Logs.
 
 ## Development Phases
 
