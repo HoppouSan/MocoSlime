@@ -1,0 +1,17 @@
+[package]
+name = "configuration"
+version = "0.1.0"
+edition = "2021"
+description = "Configuration management for Mocoslime"
+license = "MIT"
+
+[dependencies]
+serde = { workspace = true, features = ["derive"] }
+thiserror = { workspace = true }
+serde_json = { workspace = true }
+tracking-core = { path = "../tracking-core" }
+dirs = "5.0"
+nalgebra = { workspace = true }
+
+[target.'cfg(windows)'.dependencies]
+winreg = { workspace = true }

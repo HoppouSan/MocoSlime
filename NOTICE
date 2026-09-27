@@ -1,0 +1,12 @@
+Mocoslime
+Copyright (c) 2023 Moslime Contributors
+
+Mocoslime is a continued native Windows implementation of the Mocopi-to-SlimeVR
+bridge. Portions of its protocol knowledge and compatibility behavior derive
+from the MIT-licensed MoSlime project:
+https://github.com/moslime/moslime
+
+The original MIT license and copyright notice are retained in LICENSE.
+Sony, Mocopi, SlimeVR, Flutter, and Rust are names or marks of their respective
+owners. This project is independent and is not endorsed by or affiliated with
+Sony or the SlimeVR project.

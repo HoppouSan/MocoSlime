@@ -1,0 +1,23 @@
+[package]
+name = "moslime-ffi"
+version = "0.1.0"
+edition = "2021"
+description = "FFI interface for Flutter-Dart communication"
+license = "MIT"
+
+[lib]
+crate-type = ["cdylib", "staticlib"]
+
+[dependencies]
+serde = { workspace = true, features = ["derive"] }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true }
+tracing = { workspace = true }
+uuid = { workspace = true }
+moslime-core = { path = "../moslime-core" }
+mocopi-ble-windows = { path = "../mocopi-ble-windows" }
+configuration = { path = "../configuration" }
+tracking-core = { path = "../tracking-core" }
+mocopi-protocol = { path = "../mocopi-protocol" }
+slimevr-protocol = { path = "../slimevr-protocol" }
