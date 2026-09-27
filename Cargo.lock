@@ -113,7 +113,7 @@ dependencies = [
 
 [[package]]
 name = "configuration"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "dirs",
  "nalgebra",
@@ -382,7 +382,7 @@ dependencies = [
 
 [[package]]
 name = "mocopi-ble-windows"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "async-trait",
  "configuration",
@@ -398,7 +398,7 @@ dependencies = [
 
 [[package]]
 name = "mocopi-protocol"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "half",
  "nalgebra",
@@ -408,7 +408,7 @@ dependencies = [
 
 [[package]]
 name = "mocoslime"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "configuration",
  "half",
@@ -422,7 +422,7 @@ dependencies = [
 
 [[package]]
 name = "mocoslime-core"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "async-trait",
  "chrono",
@@ -443,7 +443,7 @@ dependencies = [
 
 [[package]]
 name = "mocoslime-ffi"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "configuration",
  "mocopi-ble-windows",
@@ -785,7 +785,7 @@ checksum = "0c790de23124f9ab44544d7ac05d60440adc586479ce501c1d6d7da3cd8c9cf5"
 
 [[package]]
 name = "slimevr-protocol"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "hex",
  "mocopi-protocol",
@@ -1035,7 +1035,7 @@ dependencies = [
 
 [[package]]
 name = "tracking-core"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "mocopi-protocol",
  "nalgebra",

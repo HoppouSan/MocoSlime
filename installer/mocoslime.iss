@@ -6,9 +6,9 @@
 ; Then compile this script with ISCC.
 
 #define MyAppName "Mocoslime"
-#define MyAppVersion "0.1.0"
+#define MyAppVersion "0.1.1"
 #define MyAppPublisher "Mocoslime Contributors"
-#define MyAppURL "https://example.invalid/REPLACE-WITH-MOCOSLIME-HOMEPAGE"
+#define MyAppURL "https://github.com/HoppouSan/MocoSlime/"
 #define MyAppExeName "Mocoslime.exe"
 
 [Setup]

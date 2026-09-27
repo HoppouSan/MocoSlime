@@ -1,6 +1,6 @@
 name: mocoslime
 description: Mocoslime - Native Windows Sony Mocopi Bridge for SlimeVR
-version: 0.1.0+1
+version: 0.1.1+2
 publish_to: "none"
 
 environment:

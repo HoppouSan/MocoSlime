@@ -1,6 +1,6 @@
 [package]
 name = "mocopi-protocol"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 description = "Mocopi BLE packet decoding and protocol definitions"
 license = "MIT"
