@@ -62,7 +62,7 @@ mocoslime/
 - **Tracking Core**: Quaternion math, coordinate system conversion, filtering
 - **Calibration**: Per-tracker and full-body calibration
 - **SlimeVR Output**: UDP protocol with handshake, role mapping, rotation, acceleration, and battery
-- **OSC Output**: independent UDP layer (`/moslime/...` + bundles + VRChat preset), parallel to SlimeVR
+- **OSC Output**: independent UDP layer (`/mocoslime/...` + bundles + VRChat preset), parallel to SlimeVR
 - **Modern Flutter UI**: Material 3, system tray, responsive design
 - **Persistent Configuration**: JSON-based config with migration
 
