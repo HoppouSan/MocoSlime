@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
 import 'package:window_manager/window_manager.dart';
 import 'services/native_bridge.dart';
@@ -82,6 +83,11 @@ class MocoslimeApp extends StatelessWidget {
         return MaterialApp(
           title: 'Mocoslime',
           locale: locale,
+          localizationsDelegates: const [
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
           supportedLocales: const [
             Locale('en'),
             Locale('de'),
@@ -92,11 +98,31 @@ class MocoslimeApp extends StatelessWidget {
             useMaterial3: true,
             colorSchemeSeed: const Color(0xFF6750A4),
             brightness: Brightness.dark,
+            inputDecorationTheme: const InputDecorationTheme(
+              filled: true,
+              fillColor: Color(0xFF29282F),
+              enabledBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: Color(0xFF55545D)),
+              ),
+              focusedBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: Color(0xFFB9A5FF), width: 2),
+              ),
+            ),
           ),
           darkTheme: ThemeData(
             useMaterial3: true,
             colorSchemeSeed: const Color(0xFF6750A4),
             brightness: Brightness.dark,
+            inputDecorationTheme: const InputDecorationTheme(
+              filled: true,
+              fillColor: Color(0xFF29282F),
+              enabledBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: Color(0xFF55545D)),
+              ),
+              focusedBorder: OutlineInputBorder(
+                borderSide: BorderSide(color: Color(0xFFB9A5FF), width: 2),
+              ),
+            ),
           ),
           home: const MainScreen(),
           routes: {

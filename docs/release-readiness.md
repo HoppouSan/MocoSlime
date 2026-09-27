@@ -20,14 +20,14 @@ maintainer must connect it to the intended public repository before tagging.
   rules, and Windows CI workflow are present.
 - The installer carries the project MIT license, upstream attribution, and
   third-party dependency inventory alongside the app.
-- Release version is currently `0.1.0` across the Rust workspace, Flutter app,
+- Release version is currently `0.1.1` across the Rust workspace, Flutter app,
   and installer.
 
 ## Required before publishing
 
-1. Set the actual public repository/homepage URL in `installer/mocoslime.iss`.
-   It currently contains an intentionally invalid placeholder, so installer
-   links must not be shipped as-is.
+1. Review the repository/homepage URL configured in
+   `installer/mocoslime.iss` before publishing; it currently points to the
+   intended Mocoslime GitHub repository.
 2. Create/attach the intended Git remote, inspect history and tracked files,
    and confirm the maintainers control the repository and product name.
 3. Audit source and binary assets for provenance. Keep applicable third-party
@@ -44,14 +44,14 @@ maintainer must connect it to the intended public repository before tagging.
    reporting, updater policy, and where users download official builds.
 7. Build and inspect the final installer and a portable staged build. Verify
    clean install, upgrade from the former installer using the legacy MoSlime-RS
-   identity, config/role
-   migration, uninstall behavior, tray autostart, and the four UI locales.
+   identity, config/role migration, uninstall behavior, tray autostart, and the
+   four UI locales. Interactive locale and shutdown checks remain outstanding.
 8. Update `CHANGELOG.md` with release-specific changes and known issues, tag
-   `v0.1.0`, and publish source, binaries, checksums, and release notes together.
+   `v0.1.1`, and publish source, binaries, checksums, and release notes together.
 
-Until those checks pass, describe the project as prepared for release, not as a
-tested or official binary release. No auto-updater, signed installer, or
-cross-platform BLE support is included.
+The 0.1.1 portable build is ready for review, but it is not hardware-verified
+or published. No auto-updater, signed installer, or cross-platform BLE support
+is included.
 
 ## SlimeVR and tracking feature plan
 

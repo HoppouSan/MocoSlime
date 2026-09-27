@@ -415,7 +415,7 @@ class _TrackerSummaryCard extends StatelessWidget {
                   ? 'No RSSI sample yet. Scan again while the tracker is powered on.'
                   : 'Bluetooth signal strength',
               child: LocalizedText(
-                tracker.rssi == 0 ? 'Scan for dBm' : '${tracker.rssi} dBm',
+                tracker.rssi == 0 ? 'RSSI unknown' : '${tracker.rssi} dBm',
                 style: Theme.of(context).textTheme.bodySmall?.copyWith(
                       color: _getRssiColor(tracker.rssi),
                     ),
