@@ -305,6 +305,19 @@ pub unsafe extern "C" fn moslime_set_config(config_json: *const c_char) -> c_int
     }
 }
 
+/// Persist only the UI language, preserving the rest of the live config.
+#[no_mangle]
+pub unsafe extern "C" fn moslime_set_language(language: *const c_char) -> c_int {
+    let language = match parse_str(language) {
+        Ok(value) => value,
+        Err(error) => return error as c_int,
+    };
+    if !matches!(language.as_str(), "en" | "de" | "ja" | "zh-CN") {
+        return FfiError::InvalidInput as c_int;
+    }
+    send_command(CoreCommand::SetLanguage(language))
+}
+
 /// Load the on-disk config (`%APPDATA%/Mocoslime/config.json`, created
 /// with defaults on first run) into the running core. Called once by the
 /// GUI after `moslime_init` so settings and role assignments survive

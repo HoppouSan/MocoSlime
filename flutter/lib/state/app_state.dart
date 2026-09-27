@@ -832,11 +832,15 @@ class AppState extends ChangeNotifier {
         break;
       case 'language':
         _settings.language = AppSettings.normalizeLanguage(value);
-        // Language changes must survive a restart just like the other
-        // persisted settings. Notify immediately so the UI switches without
-        // waiting for the native config round-trip.
         notifyListeners();
-        await saveSettings();
+        // Persist this single field through a queued native command. A full
+        // config read/reload here can block the UI while the BLE core applies
+        // settings and can overwrite newer tracker-role data.
+        final code = await _bridge.setLanguage(_settings.language);
+        if (code != 0) {
+          _lastError = 'Language could not be saved (code $code)';
+          notifyListeners();
+        }
         break;
       case 'logLevel':
         final level = value as String;

@@ -85,6 +85,7 @@ pub enum CoreCommand {
     StopStreaming,
     SetSlimeVRAddress(String, u16),
     SetBleConfig(Box<mocopi_ble_windows::BleConfig>),
+    SetLanguage(String),
     SetConfig(Box<AppConfig>),
     Shutdown,
 }
@@ -784,6 +785,10 @@ impl TrackerManager {
             }
             CoreCommand::SetConfig(config) => {
                 self.update_config(*config).await?;
+            }
+            CoreCommand::SetLanguage(language) => {
+                self.config.write().await.general.language = language;
+                self.persist_config().await;
             }
             CoreCommand::Shutdown => {
                 self.shutdown().await?;

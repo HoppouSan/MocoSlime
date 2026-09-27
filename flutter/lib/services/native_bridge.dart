@@ -48,6 +48,7 @@ class NativeBridge {
   static _NoArgDart? _stopStreaming;
   static _SlimeDart? _setSlime;
   static _StrArgDart? _setConfig;
+  static _StrArgDart? _setLanguage;
   static _NoArgDart? _loadConfig;
   static _GetStrDart? _getConfig;
   static _GetStrDart? _getDevices;
@@ -144,6 +145,12 @@ class NativeBridge {
           'moslime_set_slimevr_address');
       _setConfig =
           lib.lookupFunction<_StrArgNative, _StrArgDart>('moslime_set_config');
+      try {
+        _setLanguage = lib.lookupFunction<_StrArgNative, _StrArgDart>(
+            'moslime_set_language');
+      } catch (_) {
+        _setLanguage = null;
+      }
       // Config persistence (added later than v1 API): optional, the app
       // works without it if the loaded DLL is older.
       try {
@@ -516,6 +523,20 @@ class NativeBridge {
     final fn = _setConfig;
     if (fn == null) return 1;
     final ptr = _toNative(configJson);
+    try {
+      return fn(ptr);
+    } finally {
+      calloc.free(ptr);
+    }
+  }
+
+  Future<int> setLanguage(String language) async {
+    if (!_checkNative()) return 1;
+    final fn = _setLanguage;
+    // Keep older FFI DLLs usable; the UI still changes, but they cannot
+    // persist this setting independently.
+    if (fn == null) return 0;
+    final ptr = _toNative(language);
     try {
       return fn(ptr);
     } finally {
