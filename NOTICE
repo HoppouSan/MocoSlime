@@ -6,8 +6,8 @@ Copyright (c) 2026 Mocoslime Contributors
 Mocoslime is an independent native Windows Mocopi-to-SlimeVR bridge. It is not
 affiliated with, sponsored by, or endorsed by the separate MoSlime project or
 its contributors. Portions of the protocol knowledge and compatibility
-behavior are informed by the MIT-licensed MoSlime project:
-https://github.com/moslime/moslime
+behavior are informed by the MIT-licensed MocoSlime project:
+https://github.com/HoppouSan/MocoSlime
 
 The original MIT license and copyright notice are retained in LICENSE.
 Sony, Mocopi, SlimeVR, Flutter, and Rust are names or marks of their respective
